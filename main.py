@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
+from dotenv import dotenv_values
 import requests
-import os
 
+
+config = dotenv_values(".env")
 app = Flask(__name__)
-NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+API_KEY = config["KEY"]
+
 
 @app.route('/')
 def index():
@@ -13,7 +16,7 @@ def index():
 @app.route('/news')
 def news():
     NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-    NEWS_API_KEY = "751aa5c95c6d4ffab434a38f93f35163"
+    NEWS_API_KEY = API_KEY
     KEY_WORD = "Python, -swallows, -swallowed"
     news_params = {
         "apiKey": NEWS_API_KEY,
@@ -32,4 +35,3 @@ def projects_watermark():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
