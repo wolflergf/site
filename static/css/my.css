@@ -1,0 +1,103 @@
+html, body {
+color: #E6F4F1;
+height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+## navbar ##
+
+.navbar-brand:hover {
+color: #3A4856;
+}
+.nav-link {
+color: #E6F4F1;
+font-size: 1.1em;
+}
+.nav-link:hover {
+color: #3A4856;
+}
+.mask-custom, .dropdown-menu {
+backdrop-filter: blur(5px);
+background-color: rgba(255, 255, 255, .15);
+}
+.sm-icons {
+flex-direction: row;
+}
+#hero {
+max-width: 80%;
+max-height: 80%;
+border: 5px solid white;
+transition: transform 1s;
+}
+#hero:hover {
+transform: scale(1.2) rotate(9deg);
+}
+
+
+@media only screen and (max-width: 960px) {
+.sm-icons .nav-item {
+padding-right: 1em;
+  }
+}
+
+## hero ##
+
+.hero, .watermark {
+height: 100vh;
+margin-bottom: 45px;
+padding: 120px 0 0 0;
+}
+.btn {
+margin-bottom: 35px;
+color: #3A4856;
+background: #E6F4F1;
+box-shadow: inset 0 0 0 50px #ffffff;
+}
+.btn:hover {
+color: #E6F4F1;
+background: transparent;
+box-shadow: inset 0 0 0 0 #E6F4F1;
+border-color: #E6F4F1;
+}
+.btn:first-child {
+margin-right: 20px;
+}
+.hero .hero-image {
+text-align: right;
+padding-right: 75px;
+}
+.hero .hero-image img {
+max-width: 80%;
+max-height: 80%;
+border: 5px solid white;
+transition: transform 1s;
+}
+#brand1 {
+font-size: 1.75rem;
+letter-spacing: 3px;
+color: #E6F4F1;
+}
+
+.blog {
+padding: 75px;
+}
+
+.card {
+color: #E6F4F1;
+background: transparent;
+margin: 15px;
+}
+.information, .watermark {
+margin-top: 90px;
+}
+
+#span1 {
+color: var(--bs-secondary-color);
+color: #E6F4F1;
+}
+
+.h1-watermark {
+padding: 75px;
+}

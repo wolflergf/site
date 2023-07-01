@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+
+
+
+<div class="container information">
+    <div class="card p-3">
+        <figure class="p-3 mb-0">
+            <blockquote class="blockquote">
+                <p>This page is created dynamically, it uses Flask, Jinja2, and an API that makes the request over
+                    Python, returning the cards below and directing the link to the page that created the subject.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted">
+                Created by <cite title="Source Title">Wolfler Guzzo Ferreira</cite>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+<div class="blog">
+    <div class="section-header text-center">
+        <h2>Latest Articles</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {% for i in range(0, 4) %}
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ all_articles[i]["title"] }}</h5>
+                    <p class="card-text">{{ all_articles[i]["author"]}}</p>
+                    <p class="card-text">{{ all_articles[i]["publishedAt"] }}</p>
+                    <a href="{{ all_articles[i]['url'] }}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow mask-custom">
+    <div class="container">
+        <a class="navbar-brand" id="brand1" href="#">Wolfler</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('news') }}">Python News</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Projects
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item nav-item nav-link" href="{{ url_for('projects_watermark') }}">WaterMark</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Color Palette</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="mailto: wolflergf@gmail.com">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav sm-icons mr-0">
+                <li class="nav-item"><a class="nav-link" href="https://github.com/wolflergf"><i
+                        class="fab fa-github"></i></a></li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://www.linkedin.com/in/wolfler-guzzo-ferreira-9976a466/"><i
+                        class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

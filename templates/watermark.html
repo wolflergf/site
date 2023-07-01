@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Water Mark App{% endblock %}
+{% block content %}
+<div class="container information">
+    <h1 class="text-center h1-watermark">WaterMarkApp</h1>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="static/img/main.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">WaterMarkApp</h5>
+                    <p class="card-text">It's made in Python. With this app, users can easily protect
+                        their images. It allows users to add an image as a watermark quickly and easily. I hope you like
+                        it.<br>
+                        You can download the file code on my GitHub: <br>
+                    <div class="hero-btn">
+                        <a href="https://github.com/wolflergf/WaterMark" class="btn">WaterMarkApp</a><br>
+                    </div>
+                    Or you can download the executable <br>
+                    <div class="hero-btn">
+                        <a href="static/downloads/WaterMarkApp.exe" class="btn">WaterMarkApp</a>
+                    </div>
+                    </p>
+                    <figcaption class="blockquote-footer mb-0 text-muted">
+                        Created by <cite title="Source Title">Wolfler Guzzo Ferreira</cite>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
