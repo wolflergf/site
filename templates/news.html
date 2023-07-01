@@ -8,8 +8,24 @@
     <div class="card p-3">
         <figure class="p-3 mb-0">
             <blockquote class="blockquote">
-                <p>This page is created dynamically, it uses Flask, Jinja2, and an API that makes the request over
-                    Python, returning the cards below and directing the link to the page that created the subject.</p>
+                <p>The code snippet represents a Flask route that dynamically fetches news articles using the NewsAPI
+                    and renders them on a webpage.<br>
+                    It utilizes Flask, Jinja2, and the requests library for making API
+                    requests.
+                </p>
+                <p>
+                    The /news route function performs the following steps:
+                </p>
+                <p>
+                    Defines the NewsAPI endpoint, API key, and search keyword.<br>
+                    Sets up parameters for the API request.<br>
+                    Sends a GET request to the NewsAPI endpoint with the specified parameters.<br>
+                    Extracts the articles from the API response.<br>
+                    Selects the first four articles.<br>
+                    Renders the "news.html" template, passing the selected articles to be displayed.<br>
+                    Overall, the code fetches news articles based on the provided keyword, and displays them on the
+                    webpage using Flask and Jinja2 templating.
+                </p>
             </blockquote>
             <figcaption class="blockquote-footer mb-0 text-muted">
                 Created by <cite title="Source Title">Wolfler Guzzo Ferreira</cite>
@@ -41,4 +57,3 @@
 
 
 {% endblock %}
-
