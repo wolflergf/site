@@ -14,22 +14,18 @@ openai.api_key = config["OPENAI_API_KEY"]
 def get_colors(msg):
     # Define a prompt for generating color palettes based on text prompts
     prompt = f"""
-    You are a color palette generating assistant. Your task is to generate color palettes based on verbal descriptions, themes, moods, or instructions provided in the prompt. The color palettes should consist of 2 to 8 colors.
+    You are a color palette generating assistant. Your task is to create color palettes based on verbal descriptions, themes, moods, or instructions 				provided in the prompt. The color palettes should consist of 2 to 8 colors.
 
-    **Example:**
+	**Example:**
 
-    Q: Convert the following verbal description of a color palette into a list of colors: The Mediterranean Sea
-    A: ["#006699", "#66CCCC", "#F0E68C", "#008000", "#F08080"]
+	Q: Generate a color palette inspired by the following verbal description: "Sunset on the beach"
+	A: ["#FF6B6B", "#FF8E1C", "#FFC300", "#FFE74C", "#5BC0EB", "#009BDD", "#021C1E"]
 
-    Q: Convert the following verbal description of a color palette into a list of colors: sage, nature, earth
-    A: ["#EDF1D6", "#9DC08B", "#609966", "#40513B"]
-
-    **Desired Format:**
-    The color palettes should be provided in a JSON array format, where each element is a hexadecimal color code.
-
-    Q: Convert the following verbal description of a color palette into a list of colors: {msg}
-    A:
-
+	**Desired Format:***
+	
+	The color palettes should be provided in a JSON array format, where each element is a hexadecimal color code.
+	Q: Create a color palette based on the following verbal description: {msg}
+	A:
     """
     # Send completion request to OpenAI API to generate color palette
     response = openai.Completion.create(
