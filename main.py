@@ -30,7 +30,7 @@ def get_colors(msg):
     # Send completion request to OpenAI API to generate color palette
     response = openai.Completion.create(
         prompt=prompt,
-        model="text-davinci-003",
+        model="davinci-002",
         max_tokens=200,
     )
 
@@ -39,12 +39,12 @@ def get_colors(msg):
     return colors
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
-@app.route('/news')
+@app.route("/news")
 def news():
     NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
     NEWS_API_KEY = API_KEY
@@ -59,9 +59,9 @@ def news():
     return render_template("news.html", all_articles=three_articles)
 
 
-@app.route('/projects')
+@app.route("/projects")
 def projects_watermark():
-    return render_template('watermark.html')
+    return render_template("watermark.html")
 
 
 @app.route("/palette", methods=["POST"])
@@ -76,5 +76,5 @@ def palette_init():
     return render_template("palette.html")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
